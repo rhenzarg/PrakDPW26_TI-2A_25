@@ -1,79 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SIMPUS-Mini | Tambah Buku</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-</head>
 
-<body>
-    <header>
-        <h1>SIMPUS-Mini</h1>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#1d5b8a;">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">SIMPUS-Mini</a>
 
-        <nav>
-            <ul>
-                <li><a href="../index.html">Beranda</a></li>
-                <li><a href="list.html">Daftar Buku</a></li>
-                <li><a href="tambah.html">Tambah Buku</a></li>
-                <li><a href="../anggota/list.html">Daftar Anggota</a></li>
-            </ul>
-        </nav>
-    </header>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <main>
-        <section>
-            <h2>Tambah Buku</h2>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Beranda</a>
+            </li>
 
-            <form>
-                <p>
-                    <label for="judul">Judul</label><br>
-                    <input type="text" id="judul" name="judul" required>
-                </p>
+            <li class="nav-item">
+              <a class="nav-link" href="list.html">Daftar Buku</a>
+            </li>
 
-                <p>
-                    <label for="pengarang">Pengarang</label><br>
-                    <input type="text" id="pengarang" name="pengarang" required>
-                </p>
+            <li class="nav-item">
+              <a class="nav-link active" href="tambah.html">Tambah Buku</a>
+            </li>
 
-                <p>
-                    <label for="tahun">Tahun Terbit</label><br>
-                    <input type="number" id="tahun" name="tahun" min="1900" max="2026" required>
-                </p>
+            <li class="nav-item">
+              <a class="nav-link" href="../anggota/list.html">
+                Daftar Anggota
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-                <p>
-                    <label for="isbn">ISBN</label><br>
-                    <input type="text" id="isbn" name="isbn">
-                </p>
+    <!-- Main -->
+    <main class="container my-4">
+      <section class="card shadow-sm">
+        <div class="card-body">
+          <h2 class="card-title mb-3" style="color:#1d5b8a;">
+            Tambah Buku
+          </h2>
 
-                <p>
-                    <label for="stok">Stok</label><br>
-                    <input type="number" id="stok" name="stok" min="0" required>
-                </p>
+          <form>
+            <div class="mb-3">
+              <label for="judul" class="form-label">Judul</label>
+              <input
+                type="text"
+                class="form-control"
+                id="judul"
+                name="judul"
+                required
+              />
+            </div>
 
-                <p>
-                    <label for="kategori">Kategori</label><br>
-                    <select id="kategori" name="kategori">
-                        <option value="fiksi">Fiksi</option>
-                        <option value="non-fiksi">Non-Fiksi</option>
-                        <option value="referensi">Referensi</option>
-                    </select>
-                </p>
+            <div class="mb-3">
+              <label for="pengarang" class="form-label">Pengarang</label>
+              <input
+                type="text"
+                class="form-control"
+                id="pengarang"
+                name="pengarang"
+                required
+              />
+            </div>
 
-                <p>
-                    <button type="submit">Simpan</button>
-                </p>
-            </form>
-        </section>
+            <div class="mb-3">
+              <label for="tahun" class="form-label">Tahun Terbit</label>
+              <input
+                type="number"
+                class="form-control"
+                id="tahun"
+                name="tahun"
+                min="1900"
+                max="2026"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="isbn" class="form-label">ISBN</label>
+              <input
+                type="text"
+                class="form-control"
+                id="isbn"
+                name="isbn"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="stok" class="form-label">Stok</label>
+              <input
+                type="number"
+                class="form-control"
+                id="stok"
+                name="stok"
+                min="0"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="kategori" class="form-label">Kategori</label>
+              <select
+                class="form-select"
+                id="kategori"
+                name="kategori"
+              >
+                <option value="fiksi">Fiksi</option>
+                <option value="non-fiksi">Non-Fiksi</option>
+                <option value="referensi">Referensi</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn" style="background-color:#1d5b8a; color:#fff;">
+              Simpan
+            </button>
+          </form>
+        </div>
+      </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 1</p>
+    <!-- Footer -->
+    <footer class="text-center py-4">
+      <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 3.1</p>
     </footer>
-</body>
 
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
